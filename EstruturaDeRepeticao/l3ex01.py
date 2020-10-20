@@ -1,1 +1,13 @@
-''' 1) Faça um Programa que peça dois números e imprima o maior deles. '''
+''' 1) Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido. '''
+
+nota = float(input("Entre com um nota: "))
+
+while nota != '.': 
+  if nota >= 0 and nota <= 10:
+    print("Nota válida: %.2f" % nota)
+    nota = int(input("\nEntre com um nota: "))
+  else:
+    print("Nota inválida: %.2f" % nota)
+    nota = int(input("\nEntre com um nota: "))
+else:
+  print("Fim do programa")

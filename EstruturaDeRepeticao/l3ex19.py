@@ -24,7 +24,6 @@ for x in range(1, qt_num):
     print("\nErro: Tente novamente! números entre(0-1000)")
     num = float(input("Entre com um número: "))
 
-
 print("Maior:",NUM_MAIOR)
 print("Menor:",NUM_MENOR)
 print("Soma dos números:",soma_numeros)
