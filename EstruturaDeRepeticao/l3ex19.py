@@ -2,11 +2,11 @@
 
 qt_num = int(input("Entre com o tamanho do conjunto de números: "))
 num = float(input("Entre com um número: "))
-NUM_MENOR = soma_numeros = NUM_MAIOR = num
+
+NUM_MENOR = NUM_MAIOR = soma_numeros = num
 
 for x in range(1, qt_num):
-  while num >= 0 and num <= 1000:
-    qt_num = qt_num -1  
+  while num > 0 and num < 1000:
     num = float(input("Entre com um número: "))  
     if num > NUM_MAIOR:
       NUM_MAIOR = num

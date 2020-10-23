@@ -3,7 +3,7 @@
 soma = 0
 
 for x in range(1, 6):
-  num = float(input("Entre com um número: "))
+  num = float(input("Entre com os números: "))
   soma += num
 
 media = soma/x
