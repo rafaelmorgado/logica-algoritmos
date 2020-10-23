@@ -9,5 +9,3 @@ while True:
   else:
     print("Nota inválida: %.2f" % nota)
     nota = int(input("\nEntre com um nota: "))
-else:
-  print("Fim do programa")
