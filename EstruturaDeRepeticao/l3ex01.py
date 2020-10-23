@@ -2,7 +2,7 @@
 
 nota = float(input("Entre com um nota: "))
 
-while nota != '.': 
+while True: 
   if nota >= 0 and nota <= 10:
     print("Nota válida: %.2f" % nota)
     nota = int(input("\nEntre com um nota: "))

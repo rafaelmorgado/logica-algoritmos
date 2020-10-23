@@ -1,4 +1,13 @@
-''' 6) Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para que ele mostre os números um ao lado do outro. '''
+''' 1) Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido. '''
 
-for x in range(1, 21):
-  print(x, end=" ")
+nota = float(input("Entre com um nota: "))
+
+while True: 
+  if nota >= 0 and nota <= 10:
+    print("Nota válida: %.2f" % nota)
+    nota = int(input("\nEntre com um nota: "))
+  else:
+    print("Nota inválida: %.2f" % nota)
+    nota = int(input("\nEntre com um nota: "))
+else:
+  print("Fim do programa")
