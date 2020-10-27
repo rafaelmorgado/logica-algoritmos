@@ -2,14 +2,23 @@
 
 num = int(input("Entre com um número: "))
 
-if num >= 0:
-  eprimo = 1
+if num == 1:
+  print("não é primo:", num)
+
+if num > 1:
+  eprimo = True
   divisor = 2
-  while divisor <= num-1 and eprimo:
-    while num % divisor == 0:
-      eprimo = 0
-      divisor += divisor
-      print(f"não é primo: {num}, e é divisível por: {divisor}")
-    if eprimo:
-      print("é primo:",num)
-      break
+  while divisor <= num and eprimo:
+    if num % divisor == 0:
+      if num == 2:
+        eprimo = True
+      else:
+        eprimo = False
+        print(f"não é primo: {num}")
+        for x in range(1, num+1):
+          if num % x == 0:
+            divisor += divisor
+            print(f"é divisível por {x}")
+      if eprimo:
+        print("é primo:",num)
+        break

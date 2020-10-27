@@ -1,33 +1,24 @@
-''' 19) Altere o programa anterior para que ele aceite apenas números entre 0 e 1000. '''
+''' 22) Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível. '''
 
-qt_num = int(input("Insira o tamanho do conjunto: "))
+num = int(input("Entre com um número: "))
 
-soma = 0
+if num == 1:
+  print("não é primo:", num)
 
-NUM_MENOR = 999
-NUM_MAIOR = 0
-
-while qt_num > 0:
-  num = float(input("Entre com um número: "))
-  while num > 0 and num < 1000:
-    if num > NUM_MAIOR:
-      NUM_MAIOR = num
-      soma += NUM_MAIOR
-      qt_num -= 1
-      break
-    if num < NUM_MENOR:
-      NUM_MENOR = num
-      soma += NUM_MENOR
-      qt_num -= 1
-      break
-    soma += num
-    qt_num -= 1
-    break
-  else:
-    print("\nErro: Tente novamente! números entre(0-1000)")
-else:
-  print("\nFim do programa: tamanho do conjunto tem que ser maior que 0.")
-
-print("\nMaior:",NUM_MAIOR)
-print("Menor:",NUM_MENOR)
-print("Soma dos números:",soma)
+if num > 1:
+  eprimo = True
+  divisor = 2
+  while divisor <= num and eprimo:
+    if num % divisor == 0:
+      if num == 2:
+        eprimo = True
+      else:
+        eprimo = False
+        print(f"não é primo: {num}")
+        for x in range(1, num+1):
+          if num % x == 0:
+            divisor += divisor
+            print(f"é divisível por {x}")
+      if eprimo:
+        print("é primo:",num)
+        break
