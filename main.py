@@ -1,11 +1,33 @@
-''' 1) Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido. '''
+''' 19) Altere o programa anterior para que ele aceite apenas números entre 0 e 1000. '''
 
-nota = float(input("Entre com um nota: "))
+qt_num = int(input("Insira o tamanho do conjunto: "))
 
-while True: 
-  if nota >= 0 and nota <= 10:
-    print("Nota válida: %.2f" % nota)
-    nota = int(input("\nEntre com um nota: "))
+soma = 0
+
+NUM_MENOR = 999
+NUM_MAIOR = 0
+
+while qt_num > 0:
+  num = float(input("Entre com um número: "))
+  while num > 0 and num < 1000:
+    if num > NUM_MAIOR:
+      NUM_MAIOR = num
+      soma += NUM_MAIOR
+      qt_num -= 1
+      break
+    if num < NUM_MENOR:
+      NUM_MENOR = num
+      soma += NUM_MENOR
+      qt_num -= 1
+      break
+    soma += num
+    qt_num -= 1
+    break
   else:
-    print("Nota inválida: %.2f" % nota)
-    nota = int(input("\nEntre com um nota: "))
+    print("\nErro: Tente novamente! números entre(0-1000)")
+else:
+  print("\nFim do programa: tamanho do conjunto tem que ser maior que 0.")
+
+print("\nMaior:",NUM_MAIOR)
+print("Menor:",NUM_MENOR)
+print("Soma dos números:",soma)

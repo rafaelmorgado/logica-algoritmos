@@ -1,29 +1,33 @@
 ''' 19) Altere o programa anterior para que ele aceite apenas números entre 0 e 1000. '''
 
-qt_num = int(input("Entre com o tamanho do conjunto de números: "))
-num = float(input("Entre com um número: "))
+qt_num = int(input("Insira o tamanho do conjunto: "))
 
-NUM_MENOR = NUM_MAIOR = soma_numeros = num
+soma = 0
 
-for x in range(1, qt_num):
+NUM_MENOR = 999
+NUM_MAIOR = 0
+
+while qt_num > 0:
+  num = float(input("Entre com um número: "))
   while num > 0 and num < 1000:
-    num = float(input("Entre com um número: "))  
     if num > NUM_MAIOR:
       NUM_MAIOR = num
-      soma_numeros += NUM_MAIOR
+      soma += NUM_MAIOR
+      qt_num -= 1
       break
-    else: 
-      comparador = num
-      soma_numeros += num
-      if comparador < NUM_MENOR:
-        NUM_MENOR = num
-        soma_numeros += num
-        break
+    if num < NUM_MENOR:
+      NUM_MENOR = num
+      soma += NUM_MENOR
+      qt_num -= 1
+      break
+    soma += num
+    qt_num -= 1
     break
   else:
     print("\nErro: Tente novamente! números entre(0-1000)")
-    num = float(input("Entre com um número: "))
+else:
+  print("\nFim do programa: tamanho do conjunto tem que ser maior que 0.")
 
-print("Maior:",NUM_MAIOR)
+print("\nMaior:",NUM_MAIOR)
 print("Menor:",NUM_MENOR)
-print("Soma dos números:",soma_numeros)
+print("Soma dos números:",soma)
