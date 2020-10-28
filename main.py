@@ -23,7 +23,7 @@ for num in range(1, 100):
     if num >= 90:
       n_XC = num // 90
       num -= n_XC * 90
-      print("C",end="")
+      print("XC",end="")
     if num >= 50:
       n_L = num // 50
       num -= n_L * 50
