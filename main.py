@@ -1,4 +1,4 @@
-for num in range(1, 1000):
+for num in range(1, 100):
   x = num
   while num != 0:
     if num >= 1000:
