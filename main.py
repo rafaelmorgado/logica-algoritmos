@@ -53,15 +53,12 @@ for num in range(1, 100):
       n_III = num // 3
       num -= n_III * 3
       print("III",end="")
-      break
     if num >= 2:
       n_II = num // 2
       num -= n_II * 2
       print("II",end="")
-      break
     if num >= 1:
       n_I = num // 1
       num -= n_I * 1
       print("I"*n_I,end="")
-      break
   print(" -",x, "\n")
