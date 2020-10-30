@@ -1,24 +1,22 @@
 ''' 22) Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível. '''
 
-num = int(input("Entre com um número: "))
+numero = int(input("Entre com um número: "))
 
-if num == 1:
-  print("não é primo:", num)
+if numero == 0 or numero == 1:
+  print("não é primo:", numero)
 
-if num > 1:
-  eprimo = True
-  divisor = 2
-  while divisor <= num and eprimo:
-    if num % divisor == 0:
-      if num == 2:
-        eprimo = True
-      else:
-        eprimo = False
-        print(f"não é primo: {num}")
-        for x in range(1, num+1):
-          if num % x == 0:
-            divisor += divisor
-            print(f"é divisível por {x}")
-      if eprimo:
-        print("é primo:",num)
+if numero > 1:
+  divisores = 0
+  for divisor in range(1, numero):
+    if numero % divisor == 0:
+      divisores += 1
+      if divisores > 1:
         break
+  if divisores > 1:
+    print(f"{numero} não é primo")
+    for x in range(1, numero + 1):
+      if numero % x == 0:
+        divisor += divisor
+        print(f"{numero} é divisível por {x}")
+  else:
+    print(f"{numero} não é primo")
