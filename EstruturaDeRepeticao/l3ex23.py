@@ -6,15 +6,15 @@ N = int(input("Entre com N: "))
 
 if N > 1:
   divisores = 0
-  for x in range(1, N):
-    for divisor in range(1, x):
-      if x % divisor == 0:
+  for numero in range(1, N):
+    for divisor in range(1, numero):
+      if numero % divisor == 0:
         divisores += 1
         if divisores > 1:
           break
     if divisores > 1:
       divisores = 0
-      print(f"{x} não é primo")
+      print(f"{numero} não é primo")
     else:
       divisores = 0
-      print(f"{x} é primo")
+      print(f"{numero} é primo")
