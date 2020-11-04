@@ -1,0 +1,67 @@
+for num in range(1, 1000):
+  x = num
+  while num != 0:
+    if num >= 1000:
+      n_M = num // 1000
+      num -= n_M * 1000
+      print("M"*n_M,end="")
+    if num >= 900:
+      num -= 900
+      print("CM",end="")
+    if num >= 500:
+      n_D = num // 500
+      num -= n_D * 500
+      print("D",end="")
+    if num >= 400:
+      n_CD = num // 400
+      num -= n_CD * 400
+      print("CD",end="")
+    if num >= 100:
+      n_C = num // 100
+      num -= n_C * 100
+      print("C"*n_C,end="")
+    if num >= 90:
+      n_XC = num // 90
+      num -= n_XC * 90
+      print("XC",end="")
+    if num >= 50:
+      n_L = num // 50
+      num -= n_L * 50
+      print("L",end="")
+    if num >= 40:
+      n_XL = num // 40
+      num -= n_XL * 40
+      print("XL",end="")
+    if num >= 10:
+      n_X = num // 10
+      num -= n_X * 10
+      print("X"*n_X,end="")
+    if num >= 9:
+      n_IX = num // 9
+      num_IX = n_IX * 9
+      num -= n_IX * 9
+      print("IX",end="")
+    if num >= 5:
+      n_V = num // 5
+      num -= n_V * 5
+      print("V",end="")
+    if num >= 4:
+      n_IV = num // 4
+      num -= n_IV * 4
+      print("IV",end="")
+    if num >= 3:
+      n_III = num // 3
+      num -= n_III * 3
+      print("III",end="")
+      break
+    if num >= 2:
+      n_II = num // 2
+      num -= n_II * 2
+      print("II",end="")
+      break
+    if num >= 1:
+      n_I = num // 1
+      num -= n_I * 1
+      print("I"*n_I,end="")
+      break
+  print(" -",x, "\n")
