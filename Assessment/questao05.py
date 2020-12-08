@@ -64,6 +64,7 @@ def buscar_pib(paises):
     print("\nPaís não disponível.")
     retorno_menu_buscar_pib()
 
+
 # função que lista, por país, a estimativa de variação do PIB, em percentual, entre 2013 e 2020.
 def estimativa_pib(paises):
   for pais in paises:

@@ -43,8 +43,6 @@ while cidades >= 0:
       cidade_menos_vitimas = cod_cidade
       soma_acidentes += total_acidentes_vitimas
       break
-    # soma_veiculos += total_veiculos_passeio
-    # soma_acidentes += total_acidentes_vitimas
     print("\nCidade:")
     cod_cidade = int(input("Cod cidade: "))
     total_veiculos_passeio = int(input("Total veiculos passeio: "))
